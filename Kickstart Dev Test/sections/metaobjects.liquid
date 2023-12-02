@@ -1,0 +1,27 @@
+<div class="prdct-ingredients">
+  <div class="page-width">
+    <div class="ingredients-wrapper">
+      {{ product.metafields.custom.ingredient }}--
+      {{ product.metafields.custom.ingredient.values }}
+      
+      {% for product_ingredient in product.metafields.custom.ingredient.values %}
+          {{ product_ingredient.name }}
+          {{ product_ingredient }}
+      {% endfor %}
+    </div>
+  </div
+</div>
+
+{% schema %}
+  {
+    "name": "Metaobjects ",
+    "settings": [],
+    "presets":[{"name":"Metaobjects"}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
