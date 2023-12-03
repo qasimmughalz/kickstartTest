@@ -1,0 +1,36 @@
+
+{% if status %}
+<div class="ingred-wrap ">
+  <div class="ingred-img">
+    <img src="{{ img | img_url:'' }}">
+  </div>
+  <div class="ingred-name">
+    <h2>{{ name }}</h2>
+  </div>
+  <div class="ingred-brief">
+    {{ brief-desc }}
+  </div>
+  <div class="ingred_btn">
+    <button class="ingredient_det-btn">learn more</button>
+    <div class="ingred-popup">
+      <button class="ingrd-close">X</button>
+      <div class="ingred-popup-wrapper">
+        <div class="pop-flex">
+          <div class="ingred-img">
+            <img src="{{ img | img_url:'' }}">
+          </div>
+          <div class="ingred-det">
+            <h2>{{ name }}</h2>
+            <div class="othr-ing">
+              {{ other | metafield_tag | newline_to_br }}
+            </div>
+          </div>
+        </div>
+        <div class="ingred-desc">
+          {{ desc }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

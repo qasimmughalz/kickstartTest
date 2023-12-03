@@ -1,0 +1,120 @@
+.prdct-ingredients {
+    margin: 3rem 0 3rem;
+}
+.ingredients-wrapper img {
+    width: 100%;
+}
+.ingred-img img {
+    width: 160px;
+    border-radius: 50%;
+    height: 160px;
+    object-fit: cover;
+}
+.ingred-wrap {
+    width: 100%;
+    text-align: center;
+    margin-bottom:3rem;
+}
+.ingred-wrap h2 {
+    text-transform: uppercase;
+}
+.ingred-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 75%;
+    background: #fff;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 14px #000;
+    display:none;
+}
+.ingred-popup.active {
+    display:block;
+}
+.ingred-popup-wrapper {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0 3rem 0;
+}
+.pop-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.ingrd-close {
+    padding: 1rem 3rem 0;
+    font-weight: 600;
+    display: block;
+    max-width: max-content;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+}
+
+button.ingredient_det-btn {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+button.ingrd-close:hover ,button.ingredient_det-btn:hover{
+    cursor: pointer;
+}
+.ingred-det, .ingred-desc {
+    text-align: left;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+    display: none;
+}
+.overlay.active {
+    display: block;
+}
+
+@media (min-width:480px){
+  .ingredients-wrapper {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    gap: 1%;
+  }
+  .ingred-wrap {
+    width: 49%;
+  }
+}
+@media (min-width:679px){
+  .prdct-ingredients {
+    margin: 3rem 0 5rem;
+  }
+  .ingred-wrap {
+    width: 32%;
+  }
+  .pop-flex {
+    justify-content: space-between;
+  }
+  .pop-flex .ingred-det {
+    width: 60%;
+  }
+  .pop-flex .ingred-img {
+      width: 40%;
+  }
+}
+@media (min-width:869px){
+  .ingred-wrap {
+    width: 24%;
+  }
+}
